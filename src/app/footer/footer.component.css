@@ -1,0 +1,14 @@
+.text
+{
+    font-size: 10pt;
+
+}
+
+.right
+{
+    text-align: right;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
