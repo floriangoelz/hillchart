@@ -1,8 +1,3 @@
-.text
-{
-    font-size: 10pt;
-
-}
 
 .right
 {
@@ -12,3 +7,11 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+
+.unten
+{   
+    font-size: 10pt;
+    position:absolute;
+    bottom: 0;
+}
+  
