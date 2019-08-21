@@ -1,3 +1,42 @@
 <canvas id="diagram" height="400" width="750" style="border: 1px solid #b1b3b3">
     Your browser does not support HTML canvas
 </canvas>
+
+<div id="buttonDiv" align="center">
+
+    <button id="button" [routerLink]="['../addTask']">
+        new
+    </button>
+
+    <button id="button">
+        edit
+    </button>
+
+    <button id="button" (click)="deleteTasks()">
+        delete
+    </button>
+
+</div>
+
+<br><br>
+
+<div align="center">
+    <table width=750px;>
+        <tr>
+            <th align="left">ID</th>
+            <th align="left">Titel</th>
+            <th align="left">Beschreibung</th>
+            <th align="left">Fälligeitsdatum</th>
+            <th align="left">Farbe</th>
+            <th align="left">Position</th>
+        </tr>
+        <tr *ngFor="let task of tasks">
+          <td align="left">{{ task.id }}</td>
+          <td align="left">{{ task.title }}</td>
+          <td align="left">{{ task.description }}</td>
+          <td align="left">{{ task.date }}</td>
+          <td align="left" color="task.color">▲</td>
+          <td align="left"> {{ task.position }} </td>      
+        </tr> 
+    </table>
+</div>
