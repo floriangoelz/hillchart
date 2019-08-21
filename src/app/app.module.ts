@@ -7,7 +7,6 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StartseiteComponent } from './startseite/startseite.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DiagramComponent } from './diagram/diagram.component';
 import { NavComponent } from './nav/nav.component';
@@ -15,16 +14,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './footer/footer.component';
 import { StartComponent } from './components/start/start.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
-    StartseiteComponent,
     DiagramComponent,
     NavComponent,
     FooterComponent,
-
     StartComponent
   ],
   imports: [
@@ -34,10 +29,9 @@ import { StartComponent } from './components/start/start.component';
     BrowserAnimationsModule,
     MatButtonModule,
     RouterModule.forRoot([
-      { path: '', component: StartseiteComponent },
+      { path: '', component: StartComponent },
 
-      { path: 'diagram', component: DiagramComponent },
-      { path: 'startseite', component: StartComponent }
+      { path: 'diagram', component: DiagramComponent }
     ]),
     MatToolbarModule,
 
