@@ -20,4 +20,30 @@ a {
       font-size:16pt;
       font-family:arial, "lucida console", sans-serif;
   }
-  img{ size: 60cm }
+  
+  
+
+  table, tr
+  {
+      width: 850px;
+      font-size:16pt;
+      font-family:arial, "lucida console", sans-serif;
+  }
+
+  td
+  {
+     font-size:12pt;
+  }
+
+  table
+  {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+  
+  .test
+  {
+    height:60px;
+    width:120px;
+    font-size: 16pt;
+  }
