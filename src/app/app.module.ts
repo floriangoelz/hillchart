@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,8 +11,11 @@ import { StartseiteComponent } from './startseite/startseite.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DiagramComponent } from './diagram/diagram.component';
 import { NavComponent } from './nav/nav.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './footer/footer.component';
+import { StartComponent } from './components/start/start.component';
+
+import { start } from 'repl';
 
 @NgModule({
   declarations: [
@@ -20,8 +23,9 @@ import { FooterComponent } from './footer/footer.component';
     StartseiteComponent,
     DiagramComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
 
+    StartComponent
   ],
   imports: [
     BrowserModule,
@@ -31,14 +35,13 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     RouterModule.forRoot([
       { path: '', component: StartseiteComponent },
-     
-      {path: 'diagram', component: DiagramComponent}
+
+      { path: 'diagram', component: DiagramComponent },
+      { path: 'startseite', component: StartComponent }
     ]),
     MatToolbarModule,
-    RouterModule.forRoot([
-     
-    ])
-    
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
