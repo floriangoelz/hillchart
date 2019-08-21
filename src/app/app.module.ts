@@ -13,6 +13,8 @@ import { NavComponent } from './nav/nav.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './footer/footer.component';
 import { StartComponent } from './components/start/start.component';
+import { TaskService } from './task.service';
+import { AddTaskComponent } from './add-task/add-task.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { StartComponent } from './components/start/start.component';
     DiagramComponent,
     NavComponent,
     FooterComponent,
-    StartComponent
+    StartComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
@@ -30,14 +33,16 @@ import { StartComponent } from './components/start/start.component';
     MatButtonModule,
     RouterModule.forRoot([
       { path: '', component: StartComponent },
-
+      { path: 'addTask', component: AddTaskComponent},
       { path: 'diagram', component: DiagramComponent }
     ]),
     MatToolbarModule,
 
 
   ],
-  providers: [],
+  providers: [
+    TaskService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

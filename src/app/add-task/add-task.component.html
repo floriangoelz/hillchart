@@ -1,0 +1,41 @@
+<app-diagram [tasks]="taskService.tasks"></app-diagram>
+<form [formGroup]="newTaskForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="title">
+        Title: 
+        </label>
+        <input id="title" type="text" formControlName="title">
+    </div>
+    <div>
+        <label for="id">
+        ID: 
+        </label>
+        <input id="id" type="number" formControlName="id">
+    </div>
+    <div>
+        <label for="description">
+        Description: 
+        </label>
+        <input id="description" type="text" formControlName="description">
+    </div>
+    <div>
+        <label for="date">
+        Date: 
+        </label>
+        <input id="date" type="text" formControlName="date">
+    </div>    
+    <div>
+        <label for="color">
+        Color: 
+        </label>
+        <input id="color" type="text" formControlName="color">
+    </div>
+    <div>
+        <label for="position">
+        Position: 
+        </label>
+        <input id="position" type="number" formControlName="position">
+    </div>
+    <button  class="button" type="submit">Add</button>
+    
+</form>

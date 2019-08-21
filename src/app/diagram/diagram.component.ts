@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-diagram',
@@ -6,8 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./diagram.component.css']
 })
 export class DiagramComponent implements OnInit {
+  _tasks = [];
 
-  constructor() { }
+  @Input() get tasks() {
+    return this._tasks;
+  }
+
+  set tasks(value) {
+    this._tasks = value;
+    this.drawDiagram();
+  }
+
+  constructor() {
+  }
 
   hill(x){
     return 1/((Math.pow(x,2) + 1));
@@ -18,6 +30,8 @@ export class DiagramComponent implements OnInit {
     if (canvas.getContext) {
       var ctx = canvas.getContext('2d');
 
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
       ctx.moveTo(375, 400);
       ctx.lineTo(375, 0);
       ctx.strokeStyle = "#B1B3B3";
@@ -27,21 +41,32 @@ export class DiagramComponent implements OnInit {
       ctx.beginPath();
       for(var i = -3.9; i <= 3.9; i = i + 0.01){
         var y = this.hill(i);
-        console.log((i + 4)*93.75, y);
         ctx.lineTo((i + 4)*93.75, 400 - (350 * y));
-        //console.log(Math.round((i + 4)*93.75) + " " + Math.round(400 - (300 * y)))
       }
       ctx.strokeStyle = "#06c";
       ctx.lineWidth = 4;
       ctx.stroke();
 
       ctx.beginPath();
-      ctx.font = "20px Arial"
+      ctx.fillStyle = "black";
+      ctx.font = "20px Arial";
       ctx.fillText("uncertainty", 10, 25);
       ctx.fillText("certainty", 665, 25);
+
+      for(let i = 0; i < this.tasks.length; i++){
+        ctx.beginPath();
+        let x = this.tasks[i].position; //this.taskService.tasks[i].position;
+        ctx.arc(x * 7.5, 400-(350*this.hill(x/12.5 - 4)), 7, 0, 2 * Math.PI)
+        ctx.strokeStyle = this.tasks[i].color;
+        ctx.stroke();
+        ctx.fillStyle = this.tasks[i].color;
+        ctx.fill();
+        ctx.beginPath();
+      }
     }
 
   }
+
   ngOnInit() {
     this.drawDiagram();
   }
