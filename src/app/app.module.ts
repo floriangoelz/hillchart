@@ -9,11 +9,13 @@ import { AppComponent } from './app.component';
 import { StartseiteComponent } from './startseite/startseite.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { DiagramComponent } from './diagram/diagram.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StartseiteComponent
+    StartseiteComponent,
+    DiagramComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,7 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       { path: '', component: StartseiteComponent },
      
+      {path: 'diagram', component: DiagramComponent}
     ])
   ],
   providers: [],
