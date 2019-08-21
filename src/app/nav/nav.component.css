@@ -1,0 +1,27 @@
+.example-icon {
+    padding: 0 14px;
+  }
+  
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+
+a {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+
+a:hover {
+    opacity: 0.8;
+  }
+  
+h1 {
+    font-size: 32px;
+  }
+
+.center {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
