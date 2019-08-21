@@ -1,0 +1,21 @@
+
+/* folgende Definition bezieht sich auf TAG h1 */
+h1 {
+  color:#0431B4;   /* Farbe orange */
+  font-size:28pt;  /* Größe 28pt   */
+  font-family:arial, "lucida console", sans-serif; /* Schriftart */
+}
+a {
+    color:#000000;   
+    font-size:16pt;  /* Größe 28pt   */
+    font-family:arial, "lucida console", sans-serif; /* Schriftart */
+  }
+  button{
+      color: aliceblue;
+      background-color: #0431B4;
+  }
+  p{
+      margin-left: 80pt;
+      margin-right: 80pt;
+      font-size:16pt;
+  }
