@@ -42,3 +42,17 @@ $theme: mat-light-theme($primary, $accent, $warn);
 body{
     margin: 0;
 }
+
+html, body {
+    height: 100%;
+}
+ 
+#seite {
+    position: relative;
+    min-height: 100%;
+    margin: 0 auto;
+}
+ 
+#inhalt {
+    padding-bottom: 64px;
+}
