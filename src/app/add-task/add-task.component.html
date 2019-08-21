@@ -1,41 +1,41 @@
 <app-diagram [tasks]="taskService.tasks"></app-diagram>
-<form [formGroup]="newTaskForm" (ngSubmit)="onSubmit()">
+<form id="form" [formGroup]="newTaskForm" (ngSubmit)="onSubmit()">
     <div>
-        <label for="title">
+        <label class="lbl" for="title">
         Title: 
         </label>
-        <input id="title" type="text" formControlName="title">
+        <input class="input" id="title" type="text" formControlName="title">
     </div>
     <div>
-        <label for="id">
+        <label class="lbl" for="id">
         ID: 
         </label>
-        <input id="id" type="number" formControlName="id">
+        <input class="input" id="id" type="number" formControlName="id">
     </div>
     <div>
-        <label for="description">
+        <label class="lbl" for="description">
         Description: 
         </label>
-        <input id="description" type="text" formControlName="description">
+        <input class="input" id="description" type="text" formControlName="description">
     </div>
     <div>
-        <label for="date">
+        <label class="lbl" for="date">
         Date: 
         </label>
-        <input id="date" type="text" formControlName="date">
+        <input class="input" id="date" type="text" formControlName="date">
     </div>    
     <div>
-        <label for="color">
+        <label class="lbl" for="color">
         Color: 
         </label>
-        <input id="color" type="text" formControlName="color">
+        <input class="input" id="color" type="text" formControlName="color">
     </div>
     <div>
-        <label for="position">
-        Position: 
+        <label class="lbl" for="position">
+        Position (0 - 100): 
         </label>
-        <input id="position" type="number" formControlName="position">
+        <input class="input" id="position" type="number" formControlName="position">
     </div>
-    <button  class="button" type="submit">Add</button>
+    <button mat-button class="button" type="submit">Add</button>
     
 </form>

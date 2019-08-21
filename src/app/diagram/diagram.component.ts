@@ -58,12 +58,14 @@ export class DiagramComponent implements OnInit {
       for(let i = 0; i < this.tasks.length; i++){
         ctx.beginPath();
         let x = this.tasks[i].position; //this.taskService.tasks[i].position;
-        ctx.arc(x * 7.5, 400-(350*this.hill(x/12.5 - 4)), 7, 0, 2 * Math.PI)
+        ctx.arc(x * 7.5, 400-(15*this.hill(x/25 - 2)), 7, 0, 2 * Math.PI)
         ctx.strokeStyle = this.tasks[i].color;
         ctx.stroke();
         ctx.fillStyle = this.tasks[i].color;
         ctx.fill();
-        ctx.beginPath();
+
+        ctx.fillStyle = "black";
+        ctx.fillText(this.tasks[i].title, x * 7.5, 400-(15*this.hill(x/25 - 2)) + 40);
       }
     }
 

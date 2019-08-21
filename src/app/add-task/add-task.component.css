@@ -1,0 +1,22 @@
+.input{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+}
+
+#form{
+    margin-left: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lbl{
+    width: 100px;
+    height: 40px;
+}
+
+.button{
+    background-color:#0066cc;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}

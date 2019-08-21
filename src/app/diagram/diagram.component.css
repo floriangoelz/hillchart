@@ -6,3 +6,27 @@
     display: block;
     background-color: white;
 }
+
+ 
+.button{
+    margin: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+    background-color: #0066cc;
+    color: white;
+    font-size: 20px;
+    }
+  
+    #hillChart{
+      height: 250px;
+      border: solid;
+      border-color: lightgray;
+  
+    }
+  
+    .table{
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+  
+    
