@@ -18,5 +18,6 @@ a {
       margin-left: 80pt;
       margin-right: 80pt;
       font-size:16pt;
+      font-family:arial, "lucida console", sans-serif;
   }
-  img{ }
+  img{ width: 50; height: auto }
