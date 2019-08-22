@@ -13,7 +13,7 @@
     </button>
 
     <button mat-button class="button" (click)="deleteTasks()">
-        delete
+        delete last
     </button>
 
 </div>
@@ -24,10 +24,10 @@
     <table class="table" width=750px;>
         <tr>
             <th align="middle">ID</th>
-            <th align="middle">Titel</th>
-            <th align="middle">Beschreibung</th>
-            <th align="middle">Fälligeitsdatum</th>
-            <th align="middle">Farbe</th>
+            <th align="middle">Title</th>
+            <th align="middle">Description</th>
+            <th align="middle">Duedate</th>
+            <th align="middle">Color</th>
             <th align="middle">Position</th>
         </tr>
         <tr *ngFor="let task of tasks">

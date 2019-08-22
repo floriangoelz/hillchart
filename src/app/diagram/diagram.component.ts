@@ -75,4 +75,7 @@ export class DiagramComponent implements OnInit {
     this.drawDiagram();
   }
 
+  deleteTasks(){
+    this.tasks.pop();
+  }
 }

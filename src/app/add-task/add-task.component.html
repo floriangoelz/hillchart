@@ -1,16 +1,16 @@
 <app-diagram [tasks]="taskService.tasks"></app-diagram>
 <form id="form" [formGroup]="newTaskForm" (ngSubmit)="onSubmit()">
     <div>
-        <label class="lbl" for="title">
-        Title: 
-        </label>
-        <input class="input" id="title" type="text" formControlName="title">
-    </div>
-    <div>
         <label class="lbl" for="id">
         ID: 
         </label>
         <input class="input" id="id" type="number" formControlName="id">
+    </div>
+    <div>
+        <label class="lbl" for="title" style="width: 100px">
+        Title: 
+        </label>
+        <input class="input" id="title" type="text" formControlName="title">
     </div>
     <div>
         <label class="lbl" for="description">
@@ -32,7 +32,7 @@
     </div>
     <div>
         <label class="lbl" for="position">
-        Position (0 - 100): 
+        Position: <br>(0 - 100)
         </label>
         <input class="input" id="position" type="number" formControlName="position">
     </div>
